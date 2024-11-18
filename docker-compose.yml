@@ -1,4 +1,3 @@
-version: "3"
 services:
   directus:
     image: directus/directus:11.1.2
@@ -7,7 +6,9 @@ services:
     volumes:
       - ./database:/directus/database
       - ./uploads:/directus/uploads
+      # Mount the extensions directory to make custom extensions available
       - ./extensions:/directus/extensions
+      - ./myendpoint:/directus/extensions/directus-extension-myendpoint
     environment:
       SECRET: "replace-with-secure-random-value"
       ADMIN_EMAIL: "admin@example.com"
@@ -15,3 +16,7 @@ services:
       DB_CLIENT: "sqlite3"
       DB_FILENAME: "/directus/database/data.db"
       WEBSOCKETS_ENABLED: "true"
+      # Enable extension debugging if needed
+      LOG_LEVEL: "debug"
+      PUBLIC_URL: "http://localhost:8055"
+      EXTENSIONS_PATH: "/directus/extensions"
