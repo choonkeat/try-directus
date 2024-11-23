@@ -16,7 +16,13 @@
 		"type": "endpoint",
 		"path": "dist/index.js",
 		"source": "src/index.js",
-		"host": "^11.0.0"
+		"host": "^11.0.0",
+		"sandbox": {
+			"enabled": true,
+			"requestedScopes": {
+				"log": {}
+			}
+		}
 	},
 	"scripts": {
 		"build": "directus-extension build",
