@@ -1,3 +1,6 @@
 export default (router) => {
-	router.get('/', (req, res) => res.send('My Bundle Endpoint, Lah!'));
+	router.get('/', (req, res) => {
+		console.log('[console.log] My Bundle Endpoint, Lah!');
+		res.send('My Bundle Endpoint, Lah!');
+	});
 };
