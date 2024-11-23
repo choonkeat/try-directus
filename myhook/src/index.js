@@ -1,9 +1,11 @@
+import { log } from 'directus:api';
+
 export default ({ filter, action }) => {
 	filter('items.create', () => {
-		console.log('Creating Item!');
+		log('[sandboxed] Creating Item!');
 	});
 
 	action('items.create', () => {
-		console.log('Item created!');
+		log('[sandboxed] Item created!');
 	});
 };
