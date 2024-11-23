@@ -16,5 +16,6 @@ build-myhook:
 build-mybundle:
 	(cd mybundle && npm run build)
 
+EXTENSION=myendpoint
 try-myendpoint:
-	curl -i http://localhost:8055/myendpoint/
+	curl -i http://localhost:8055/$(EXTENSION)/

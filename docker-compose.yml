@@ -10,6 +10,7 @@ services:
       - ./myendpoint:/directus/extensions/directus-extension-myendpoint
       - ./myinterface:/directus/extensions/directus-extension-myinterface
       - ./myhook:/directus/extensions/directus-extension-myhook
+      - ./mybundle:/directus/extensions/directus-extension-mybundle
     environment:
       SECRET: "replace-with-secure-random-value"
       ADMIN_EMAIL: "admin@example.com"

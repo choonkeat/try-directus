@@ -1,5 +1,5 @@
 {
-	"name": "mybundle",
+	"name": "directus-extension-mybundle",
 	"description": "Please enter a description for your extension",
 	"icon": "extension",
 	"version": "1.0.0",
@@ -18,7 +18,13 @@
 			"app": "dist/app.js",
 			"api": "dist/api.js"
 		},
-		"entries": [],
+		"entries": [
+			{
+				"type": "endpoint",
+				"name": "mybundle-endpoint",
+				"source": "src/mybundle-endpoint/index.js"
+			}
+		],
 		"host": "^10.10.0"
 	},
 	"scripts": {
