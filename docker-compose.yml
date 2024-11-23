@@ -21,3 +21,4 @@ services:
       LOG_LEVEL: "debug"
       PUBLIC_URL: "http://localhost:8055"
       EXTENSIONS_PATH: "/directus/extensions"
+      EXTENSIONS_AUTO_RELOAD: "true"
