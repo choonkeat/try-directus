@@ -22,7 +22,13 @@
 			"app": "src/app.js",
 			"api": "src/api.js"
 		},
-		"host": "^10.10.0"
+		"host": "^10.10.0",
+		"sandbox": {
+			"enabled": true,
+			"requestedScopes": {
+				"log": {}
+			}
+		}
 	},
 	"scripts": {
 		"build": "directus-extension build",
